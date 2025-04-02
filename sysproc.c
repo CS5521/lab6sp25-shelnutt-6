@@ -96,3 +96,8 @@ sys_hw(void)
   cprintf("hello world!\n");
   return 0;
 }
+
+int sys_fkc(void)
+{
+  return fork_count;
+}
