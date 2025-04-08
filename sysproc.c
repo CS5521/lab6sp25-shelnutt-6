@@ -99,5 +99,18 @@ sys_hw(void)
 
 int sys_fkc(void)
 {
+  int x;
+
+  if (argint(0, &x) < 0)
+  {
+    return -1;
+  }
+
+  if (x == 0)
+  {
+    fork_count = 0;
+    return 0;
+  }
+
   return fork_count;
 }
